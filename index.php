@@ -1,7 +1,7 @@
 <?php
 ob_start();
-define('API_KEY','token');
-$admin = "216990494";
+define('API_KEY','279668906:AAHAfjFmIHcsJVLNXD3i101uQ3ScdxSKWp0');
+$admin = "208094932";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -43,7 +43,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "<i>welcome to lockedit robot</i>";
+  $text = "<i>welcome to lockedit </i>";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -51,7 +51,7 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'AddGroup','url'=>'https://telegram.me/lockedite_rebot?startgroup=new']
+          ['text'=>'Develoer','url'=>'https://telegram.me/NobLest']
         ],
       ]
     ])
